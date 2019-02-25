@@ -22,20 +22,20 @@ guide you through the process.
 
 ```bash
 cd $REPODIR
-docker build -t neuropersistence .
+docker build -t neuralpersistence .
 ```
 
 ## Run experiments and summarize results
 
 ```bash
-docker run -v $PWD/results/:/Neuropersistence/results/ neuropersistence python3 -u run_experiments.py
-docker run -v $PWD/results/:/Neuropersistence/results/ neuropersistence python3 combine_runs.py results/runs/* --output results/combined_runs.csv
+docker run -v $PWD/results/:/Neuralpersistence/results/ neuralpersistence python3 -u run_experiments.py
+docker run -v $PWD/results/:/Neuralpersistence/results/ neuralpersistence python3 combine_runs.py results/runs/* --output results/combined_runs.csv
 ```
 
 ## Plot the results
 
 ```bash
-docker run -v $PWD/results/:/Neuropersistence/results/ neuropersistence python3 create_plots.py results/combined_runs.csv results/combined_runs.pdf
+docker run -v $PWD/results/:/Neuralpersistence/results/ neuralpersistence python3 create_plots.py results/combined_runs.csv results/combined_runs.pdf
 ```
 
 The visualizations of the mean normalized neural persistence, as well as
